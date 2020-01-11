@@ -1,6 +1,7 @@
 name: 'Terraform GitHub Actions'
 on:
   - pull_request
+  - push
 jobs:
   terraform:
     name: 'Terraform'
@@ -11,7 +12,7 @@ jobs:
       - name: 'Terraform Format'
         uses: hashicorp/terraform-github-actions@master
         with:
-          tf_actions_version: 0.12.13
+          tf_actions_version: 0.12.18
           tf_actions_subcommand: 'fmt'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
