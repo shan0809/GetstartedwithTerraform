@@ -1,2 +1,2 @@
-location="North Europe"
-rgname="rgname"
+location = "North Europe"
+rgname   = "rgname"

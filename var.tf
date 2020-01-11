@@ -11,15 +11,15 @@ variable "vm_hostname" {
 }
 
 variable "rgname" {
-#  #default = ""
+  #  #default = ""
 }
 
 
 variable "tags" {
-  type = map 
-  default={
-owner = "shan"
-resource = "storage"
-another = "tag"
+  type = map
+  default = {
+    owner    = "shan"
+    resource = "storage"
+    another  = "tag"
   }
 }
