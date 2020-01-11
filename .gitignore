@@ -1,3 +1,4 @@
 #exclude following files
 terraform.tfstate
 *.tfstate
+.terraform
