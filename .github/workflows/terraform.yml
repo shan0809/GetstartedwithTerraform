@@ -1,27 +1,26 @@
-name: 'Terraform GitHub Actions'
+name: "Terraform GitHub Actions"
 on:
-  - pull_request
-    push:
-     branches:
-       - terraform/Resource
+  push:
+    branches:
+      - terraform/Resource
 jobs:
   terraform:
-    name: 'Terraform'
+    name: "Terraform"
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout'
+      - name: "Checkout"
         uses: actions/checkout@master
-      - name: 'Terraform Initialization'
+      - name: "Terraform Initialization"
         uses: hashicorp/terraform-github-actions@master
         with:
           tf_actions_version: 0.12.18
-          tf_actions_subcommand: 'init'
+          tf_actions_subcommand: "init"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: 'Terraform Format'
-        uses:  hashicorp/terraform-github-actions@master
+      - name: "Terraform Format"
+        uses: hashicorp/terraform-github-actions@master
         with:
           tf_actions_version: 0.12.18
-          tf_actions_subcommand: 'fmt'
+          tf_actions_subcommand: "fmt"
         #run: |
         #   terrform plan -var-file=terraform.tfvars
