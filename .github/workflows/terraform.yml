@@ -20,4 +20,4 @@ jobs:
         uses:  hashicorp/terraform-github-actions@master
         with:
           tf_actions_version: 0.12.18
-          tf_actions_subcommand: 'Format'
+          tf_actions_subcommand: 'fmt'
