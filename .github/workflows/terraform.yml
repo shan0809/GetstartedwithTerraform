@@ -2,10 +2,8 @@ name: "Terraform GitHub Actions"
 on:
   pull_request:
   push:
-    #branches:
-    #  - terraform/ResourceGroup
-    branches-ignore:
-      - "master"
+    branches:
+      - terraform/ResourceGroup
 jobs:
   terraform:
     name: "Terraform"
@@ -20,39 +18,3 @@ jobs:
           tf_actions_subcommand: "init"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: "Terraform Format"
-        uses: hashicorp/terraform-github-actions@master
-        with:
-          tf_actions_version: 0.12.18
-          tf_actions_subcommand: "fmt"
-          run: |
-            echo hellow world
-      - name: "Terraform Plan"
-        uses: hashicorp/terraform-github-actions@master
-        with:
-          tf_actions_version: 0.12.18
-          tf_actions_subcommand: "plan"
-          tf_action_working_dir: "."
-          args: '-var-file=terraform.tfvars'
-            
-  #jobs:
-  shantanudemo:
-    name: My Job
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print a greeting
-        env:
-          MY_VAR: Hi there! My name is
-          FIRST_NAME: Mona
-          MIDDLE_NAME: The
-          LAST_NAME: Octocat
-        run: |
-          echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
-          curl www.google.com
-  shelldemo:
-    name: My jobnumber2
-    runs-on: ubuntu-latest
-    steps:
-      - name: Display Path
-        run: echo $Path
-        shell: bash
