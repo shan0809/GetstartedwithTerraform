@@ -25,5 +25,5 @@ jobs:
         with:
           tf_actions_version: 0.12.18
           tf_actions_subcommand: "fmt"
-        #run: |
-        #   terrform plan -var-file=terraform.tfvars
+          run: |
+            echo hellow world
