@@ -41,3 +41,10 @@ jobs:
         run: |
           echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
           curl www.google.com
+  shelldemo:
+    name: My jobnumber2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Path
+        run: echo $Path
+        shell: bash
