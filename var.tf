@@ -5,12 +5,9 @@ variable "account_tier" {
 variable "location" {
   #default = ""
 }
-
-
 variable "vm_hostname" {
   default = "host"
 }
-
 variable "rgname" {
   #  #default = ""
 }

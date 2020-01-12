@@ -1,8 +1,11 @@
 name: "Terraform GitHub Actions"
 on:
+  pull_request:
   push:
     branches:
       - terraform/ResourceGroup
+    branches-ignore:
+      - 'master'
 jobs:
   terraform:
     name: "Terraform"
