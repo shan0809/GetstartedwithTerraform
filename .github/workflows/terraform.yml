@@ -1,8 +1,9 @@
 name: "Terraform GitHub Actions"
 on:
+  pull_request:
   push:
-    branches-ignore:
-      - master
+    branches:
+      - terraform/ResourceGroup
 jobs:
   terraform:
     name: "Terraform Init"
@@ -11,30 +12,11 @@ jobs:
       - name: "Checkout"
         uses: actions/checkout@master 
       - name: "Terraform Initialization"
-        uses: hashicorp/terraform-github-actions@master
+        uses: hashicorp/terraform-github-actions@master {owner/repo@branch}
         with:
           tf_actions_version: 0.12.18
           tf_actions_subcommand: "init"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  secondjob:
-    name: "Terraform  Format"
-    runs-on: ubuntu-latest
-    steps:
-      - name: "Checkout"
-        uses: actions/checkout@master 
-      - name: "Terraform Initialization"
-        uses: hashicorp/terraform-github-actions@master
-        with:
-          tf_actions_version: 0.12.18
-          tf_actions_subcommand: "fmt"
-  thirdjob:
-    name: "ShellJobDemo"
-    runs-on: ubuntu-latest
-    steps:
-      - name: "echo demo"
-        run:  curl www.google.com
-        shell: bash
-
   
        
