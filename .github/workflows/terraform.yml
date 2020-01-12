@@ -17,6 +17,7 @@ jobs:
           tf_actions_subcommand: "init"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  secondjob:
     name: "Terraform  Format"
     runs-on: ubuntu-latest
     steps:
@@ -27,6 +28,7 @@ jobs:
         with:
           tf_actions_version: 0.12.18
           tf_actions_subcommand: "fmt"
+  thirdjob:
     name: "Terraform  Validate"
     runs-on: ubuntu-latest
     steps:
