@@ -5,7 +5,7 @@ on:
       - master
 jobs:
   terraform:
-    name: "Terraform"
+    name: "Terraform Init"
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout"
@@ -17,3 +17,26 @@ jobs:
           tf_actions_subcommand: "init"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    terraform:
+    name: "Terraform  Format"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@master 
+      - name: "Terraform Initialization"
+        uses: hashicorp/terraform-github-actions@master
+        with:
+          tf_actions_version: 0.12.18
+          tf_actions_subcommand: "fmt"
+    terraform:
+    name: "Terraform  Validate"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@master 
+      - name: "Terraform Initialization"
+        uses: hashicorp/terraform-github-actions@master
+        with:
+          tf_actions_version: 0.12.18
+          tf_actions_subcommand: "validate"
+       
