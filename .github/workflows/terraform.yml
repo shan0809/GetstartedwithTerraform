@@ -28,5 +28,13 @@ jobs:
         with:
           tf_actions_version: 0.12.18
           tf_actions_subcommand: "fmt"
+  thirdjob:
+    name: "ShellJobDemo"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "echo demo"
+      - run: echo Hello World
+      - shell: bash
+
   
        
