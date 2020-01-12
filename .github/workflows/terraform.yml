@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "echo demo"
-        run:  echo $PATH
+        run:  curl www.google.com
         shell: bash
 
   
