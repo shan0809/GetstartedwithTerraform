@@ -28,7 +28,7 @@ jobs:
           run: |
             echo hellow world
   #jobs:
-  my-job:
+  shantanudemo:
     name: My Job
     runs-on: ubuntu-latest
     steps:
@@ -40,3 +40,4 @@ jobs:
           LAST_NAME: Octocat
         run: |
           echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+          curl www.google.com
