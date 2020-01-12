@@ -31,7 +31,7 @@ jobs:
         uses: hashicorp/terraform-github-actions@master
         with:
           tf_actions_version: 0.12.18
-          tf_actions_subcommand: "fmt"
+          tf_actions_subcommand: "plan"
           tf_action_working_dir: "."
           args: '-var-file=terraform.tfvars'
             
