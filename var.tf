@@ -1,7 +1,7 @@
 variable "account_tier" {
   default = "Standard_ZRS"
 }
-#used by tfvars
+
 variable "location" {
   #default = ""
 }

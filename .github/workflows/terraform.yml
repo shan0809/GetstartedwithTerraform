@@ -2,7 +2,7 @@ name: "Terraform GitHub Actions"
 on:
   push:
     branches:
-      - terraform/Resource
+      - terraform/ResourceGroup
 jobs:
   terraform:
     name: "Terraform"
