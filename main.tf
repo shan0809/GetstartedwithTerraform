@@ -24,16 +24,5 @@ resource "azurerm_storage_account" "storage" {
   tags = var.tags
 }
 
-resource "azurerm_app_service_plan" "example" {
-  name                = "api-appserviceplan-pro"
-  location            = azurerm_resource_group.vmrg.location
-  resource_group_name = azurerm_resource_group.vmrg.name
-
-  sku {
-    tier = "Standard"
-    size = "S1"
-  }
-}
-#
 
 
