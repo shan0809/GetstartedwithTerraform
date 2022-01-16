@@ -25,4 +25,15 @@ resource "azurerm_storage_account" "storage" {
 }
 
 
+resource "azurerm_app_service_plan" "app_service" {
 
+name = "tf-vcs-cloudappserv"
+  resource_group_name      = azurerm_resource_group.vmrg.name
+  location                 = azurerm_resource_group.vmrg.location
+  
+  sku {
+  tier = "Standard"
+    size = "S1"
+  }
+
+}
