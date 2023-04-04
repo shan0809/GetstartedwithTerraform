@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 hi
 =======
+=======
+>>>>>>> parent of 5545c62... README.MD   new commit from final_branch
 Based on the output you provided, it seems like you only pushed the new branch called final_branch to the remote repository, but you did not push any code changes. The output shows Total 0 (delta 0), reused 0 (delta 0) which indicates that there were no changes to push. Additionally, the output also shows a message about creating a pull request for the final_branch on GitHub, which further suggests that you only created a new branch and did not make any changes to the code.
 
 
